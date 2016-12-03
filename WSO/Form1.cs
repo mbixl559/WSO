@@ -35,5 +35,10 @@ namespace WSO
             TitleTxt.Text = "";
             ServiceThemeTxt.Text = "";
         }
+
+        private void SongleaderCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
