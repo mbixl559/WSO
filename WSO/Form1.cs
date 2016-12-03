@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace WSO
 {
@@ -14,6 +15,25 @@ namespace WSO
     {
         public Form1() {
             InitializeComponent();
+        }
+
+        private void CreateBtn_Click(object sender, EventArgs e)
+        {
+            string tmpdate = TempServiceTime.Text;
+            Debug.Print("Template Service Time = " + tmpdate);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void resetFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewServiceTme.Text = "";
+            TempServiceTime.Text = "";
+            TitleTxt.Text = "";
+            ServiceThemeTxt.Text = "";
         }
     }
 }
