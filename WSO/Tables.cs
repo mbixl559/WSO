@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 namespace WSO
 {
     [Table("person")]
-    public class person
+    public class Person
     {
         [Key]
         public int Person_ID { get; set; }
@@ -18,7 +19,7 @@ namespace WSO
     }
 
     [Table("service")]
-    public class service
+    public class Service
     {
         [Key]
         public int Service_ID { get; set; }
