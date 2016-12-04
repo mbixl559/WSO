@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 
 namespace WSO {
 
-    class WSOApp : DbContext
-    {
+    class WSOApp : DbContext {
         public virtual DbSet<Service> Services { get; set; }
         public virtual DbSet<Person> Persons { get; set; }
         public virtual DbSet<Ensemble> Ensembles { get; set; }
@@ -20,30 +19,28 @@ namespace WSO {
         public virtual DbSet<ServiceEvent> ServiceEvents { get; set; }
         public virtual DbSet<Song> Songs { get; set; }
 
+    }
 
-        class Model
-        {
-            public void getTemplateService(DateTime datetime)
-            {
 
-        /// Query the database for a service with a date matching <datetime> and return the service
-        /// If there is no such service return null
-            public Service getService(DateTime datetime) {
-                Service service;
-                using (var db = new WSOApp()) {
-                    var tempServiceQuery = from s in db.Services
-                                           where s.Svc_DateTime == datetime
-                                           select s;
-                    List<Service> results = tempServiceQuery.ToList();
-                    if (results.Count > 0) {
-                        service = results[0];
-                    } else {
-                        service = null;
-                    }
+    class Model
+    {
+    /// Query the database for a service with a date matching <datetime> and return the service
+    /// If there is no such service return null
+        public Service getService(DateTime datetime) {
+            Service service;
+            using (var db = new WSOApp()) {
+                var tempServiceQuery = from s in db.Services
+                                        where s.Svc_DateTime == datetime
+                                        select s;
+                List<Service> results = tempServiceQuery.ToList();
+                if (results.Count > 0) {
+                    service = results[0];
+                } else {
+                    service = null;
                 }
-
-                return service;
             }
+
+            return service;
         }
     }
 }
