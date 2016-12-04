@@ -23,6 +23,27 @@ namespace WSO {
 
 
     class Model {
+
+        public List<Person> GetSongLeaders(){
+            List<Person> Songleaders = new List<Person>();
+           using (var db = new WSOApp())
+            {
+                var ServiceQuery = from s in db.Services
+                                      select s;
+                List<Service> ServiceResults = ServiceQuery.ToList();
+                foreach(Service sev in ServiceResults)
+                {
+                    var SongLeaderQuery = from p in db.Persons
+                                          where p.Person_ID == sev.Songleader_ID
+                                          select p;
+                    List<Person> SongLeaderResults = SongLeaderQuery.ToList();
+                    Songleaders.AddRange(SongLeaderResults);
+
+                }
+            }
+
+            return Songleaders;
+        }
         /// Query the database for a service with a date matching <datetime> and return the service
         /// If there is no such service return null
         public Service getService(DateTime datetime) {
