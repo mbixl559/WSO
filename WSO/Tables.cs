@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace WSO
 {
     [Table("person")]
-    public class person
+    public class Person
     {
         [Key]
         public int Person_ID { get; set; }
@@ -19,7 +19,7 @@ namespace WSO
     }
 
     [Table("service")]
-    public class service
+    public class Service
     {
         [Key]
         public int Service_ID { get; set; }
