@@ -22,10 +22,9 @@ namespace WSO {
     }
 
 
-    class Model
-    {
-    /// Query the database for a service with a date matching <datetime> and return the service
-    /// If there is no such service return null
+    class Model {
+        /// Query the database for a service with a date matching <datetime> and return the service
+        /// If there is no such service return null
         public Service getService(DateTime datetime) {
             Service service;
             using (var db = new WSOApp()) {

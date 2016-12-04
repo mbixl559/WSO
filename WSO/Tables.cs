@@ -89,7 +89,7 @@ namespace WSO
         public int Song_ID { get; set; }
         public char Song_Type { get; set; }
         public string Title { get; set; }
-        public string string Hymnbook_Num { get; set; }
+        public string Hymnbook_Num { get; set; }
         public string Arranger { get; set; }
     }
 }
