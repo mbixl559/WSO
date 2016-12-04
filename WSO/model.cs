@@ -14,18 +14,24 @@ namespace WSO {
     }
 
     class Model {
-        public void getTemplateService(DateTime datetime) {
 
-            //add code to get the template service from the database
-            Service template;
+        /// Query the database for a service with a date matching <datetime> and return the service
+        /// If there is no such service return null
+        public Service getService(DateTime datetime) {
+            Service service;
             using (var db = new WSOApp()) {
                 var tempServiceQuery = from s in db.Services
                                        where s.Svc_DateTime == datetime
                                        select s;
                 List<Service> results = tempServiceQuery.ToList();
+                if(results.Count > 0) {
+                    service = results[0];
+                } else {
+                    service = null;
+                }
             }
 
-            return;
+            return service;
         }
     }
 }
