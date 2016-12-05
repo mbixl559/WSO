@@ -37,10 +37,28 @@ namespace WSO
             }
             DateTime date = new DateTime(TempServiceDate.Value.Year, TempServiceDate.Value.Month, TempServiceDate.Value.Day, hour, min, 0);
             Service template = model.getService(date);
-            if(template == null) {
-                MessageBox.Show("No service with matching date and time to values specified for template service","My Application",
-                    MessageBoxButtons.OK);
+
+            int Newhour = 0, Newmin = 0;
+            switch (NewServiceTme.Text)
+            {
+                case "10:30 AM":
+                    Newhour = 10;
+                    Newmin = 30;
+                    break;
+                case "4:00 PM":
+                    Newhour = 16;
+                    break;
+                case "6:00 PM":
+                    Newhour = 18;
+                    break;
             }
+
+            DateTime NewDate = new DateTime(NewServiceDate.Value.Year, NewServiceDate.Value.Month, NewServiceDate.Value.Day, Newhour, Newmin, 0);
+            Service NewService = model.getService(NewDate);
+            if (NewService != null) {
+                MessageBox.Show("Service date and time you entered already exist, please choose new date and time");
+            }
+
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
