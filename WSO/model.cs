@@ -23,7 +23,9 @@ namespace WSO {
 
 
     class Model {
-
+        // Query that matches People in the person table
+        // that have had the role of songleader 
+        // if no match is found, display an error to such effect
         public List<Person> GetSongLeaders(){
             List<Person> Songleaders = new List<Person>();
            using (var db = new WSOApp())
