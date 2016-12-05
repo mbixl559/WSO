@@ -43,9 +43,10 @@ namespace WSO {
             return Songleaders.Distinct().ToList();
         }
         /// <summary>
-        /// Query the database for a service with a date matching <datetime> and return the service
-        /// If there is no such service return null
+        /// Query the database for a service
         /// </summary>
+        /// <param name="datetime"></param>
+        /// <returns>Service object matching <datetime></returns>
         public Service getService(DateTime datetime) {
             Service service;
             using (var db = new WSOApp()) {
@@ -61,6 +62,40 @@ namespace WSO {
             }
 
             return service;
+        }
+
+        /// <summary>
+        /// Inserts a new service record into the database.
+        /// </summary>
+        /// <param name="date"></param>
+        /// <param name="title"></param>
+        /// <param name="theme"></param>
+        /// <param name="songleader"></param>
+        /// <returns></returns>
+        public bool addService(DateTime date, string title, string theme, Person songleader) {
+
+            using (var db = new WSOApp())
+            {
+                Service newService = new Service
+                {
+                    Svc_DateTime = date,
+                    Title = title,
+                    Theme = theme,
+                    Songleader_ID = songleader.Person_ID,
+                    Notes = null,
+                    Organist_Conf = 'N',
+                    Pianist_Conf = 'N',
+                    Songleader_Conf = 'N',
+                    Organist_ID = null,
+                    Pianist_ID = null
+                };
+                db.Services.Add(newService);
+
+                db.SaveChanges();
+            }
+
+
+            return true;
         }
     }
 }

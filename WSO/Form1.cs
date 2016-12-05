@@ -41,6 +41,7 @@ namespace WSO
             if(template == null)
             {
                 MessageBox.Show("No service matching template service date/time.", "WSOApp", MessageBoxButtons.OK);
+                return;
             }
 
             int Newhour = 0, Newmin = 0;
@@ -62,7 +63,40 @@ namespace WSO
             Service NewService = model.getService(NewDate);
             if (NewService != null) {
                 MessageBox.Show("Service date and time you entered already exist, please choose new date and time");
+                return;
             }
+
+            string title, theme;
+            Person songleader = null;
+
+            // Get the person with the name selected from the combo box
+            foreach(Person s in model.GetSongLeaders())
+            {
+                if(SongleaderCombo.Text == s.ToString())
+                {
+                    songleader = s;
+                    break;
+                }
+            }
+
+            // Check if user entered a value
+            if(ServiceThemeTxt.Text == "")
+            {
+                theme = null;
+            } else
+            {
+                theme = ServiceThemeTxt.Text;
+            }
+            if(TitleTxt.Text == "")
+            {
+                title = null;
+
+            } else
+            {
+                title = TitleTxt.Text;
+            }
+            //add new service record
+            model.addService(NewDate, title, theme, songleader);
 
         }
 
@@ -77,11 +111,6 @@ namespace WSO
             TempServiceTime.Text = "";
             TitleTxt.Text = "";
             ServiceThemeTxt.Text = "";
-        }
-
-        private void SongleaderCombo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
