@@ -23,7 +23,8 @@ namespace WSO
         private void CreateBtn_Click(object sender, EventArgs e)
         {
             int hour = 0, min = 0;
-            switch (TempServiceTime.Text) {
+            switch (TempServiceTime.Text)
+            {
                 case "10:30 AM":
                     hour = 10;
                     min = 30;
@@ -38,6 +39,25 @@ namespace WSO
             DateTime date = new DateTime(TempServiceDate.Value.Year, TempServiceDate.Value.Month, TempServiceDate.Value.Day, hour, min, 0);
             Service template = model.getService(date);
             Debug.Print(template.ToString());
+
+            int Newhour = 0, Newmin = 0;
+            switch (NewServiceTme.Text)
+            {
+                case "10:30 AM":
+                    Newhour = 10;
+                    Newmin = 30;
+                    break;
+                case "4:00 PM":
+                    Newhour = 16;
+                    break;
+                case "6:00 PM":
+                    Newhour = 18;
+                    break;
+            }
+
+            DateTime NewDate = new DateTime(TempServiceDate.Value.Year, TempServiceDate.Value.Month, TempServiceDate.Value.Day, hour, min, 0);
+            Service NewService = model.getService(NewDate);
+
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
