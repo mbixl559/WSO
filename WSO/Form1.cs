@@ -37,7 +37,10 @@ namespace WSO
             }
             DateTime date = new DateTime(TempServiceDate.Value.Year, TempServiceDate.Value.Month, TempServiceDate.Value.Day, hour, min, 0);
             Service template = model.getService(date);
-            Debug.Print(template.ToString());
+            if(template == null) {
+                MessageBox.Show("No service with matching date and time to values specified for template service","My Application",
+                    MessageBoxButtons.OK);
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
