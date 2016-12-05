@@ -108,6 +108,8 @@ namespace WSO
                 model.addEvent(newService.Service_ID, se.Seq_Num, se.EventType_ID);
             }
 
+            MessageBox.Show("Eureka!!!! New Service Created!!!!", "WSOApp", MessageBoxButtons.OK);
+
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
