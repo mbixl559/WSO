@@ -101,7 +101,7 @@ namespace WSO
             //add new service record
             model.addService(NewDate, title, theme, songleader);
 
-            List<ServiceEvent> events = model.getServiceEvents(template);
+            List<ServiceEvent> sEvents = model.getServiceEvents(template);
             Service newService = model.getService(NewDate);
             foreach(ServiceEvent se in events)
             {
