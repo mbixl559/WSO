@@ -172,7 +172,6 @@
             this.SongleaderCombo.Name = "SongleaderCombo";
             this.SongleaderCombo.Size = new System.Drawing.Size(115, 21);
             this.SongleaderCombo.TabIndex = 15;
-            this.SongleaderCombo.SelectedIndexChanged += new System.EventHandler(this.SongleaderCombo_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -224,7 +223,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(370, 24);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
