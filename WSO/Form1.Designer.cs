@@ -55,154 +55,138 @@
             // 
             this.NewServiceTme.FormattingEnabled = true;
             this.NewServiceTme.Items.AddRange(new object[] {
-            "10:00 AM",
+            "10:30 AM",
             "4:00 PM",
             "6:00 PM"});
-            this.NewServiceTme.Location = new System.Drawing.Point(184, 57);
-            this.NewServiceTme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NewServiceTme.Location = new System.Drawing.Point(138, 46);
             this.NewServiceTme.Name = "NewServiceTme";
-            this.NewServiceTme.Size = new System.Drawing.Size(111, 24);
+            this.NewServiceTme.Size = new System.Drawing.Size(84, 21);
             this.NewServiceTme.Sorted = true;
             this.NewServiceTme.TabIndex = 3;
             // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 358);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 287);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-            this.statusStrip1.Size = new System.Drawing.Size(493, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(370, 22);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // NewServiceDate
             // 
             this.NewServiceDate.Cursor = System.Windows.Forms.Cursors.Default;
-            this.NewServiceDate.Location = new System.Drawing.Point(184, 25);
-            this.NewServiceDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NewServiceDate.Location = new System.Drawing.Point(138, 20);
             this.NewServiceDate.Name = "NewServiceDate";
-            this.NewServiceDate.Size = new System.Drawing.Size(239, 22);
+            this.NewServiceDate.Size = new System.Drawing.Size(180, 20);
             this.NewServiceDate.TabIndex = 2;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(8, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(6, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 25);
+            this.label1.Size = new System.Drawing.Size(110, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "*New Service Date:";
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(8, 60);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(6, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 25);
+            this.label2.Size = new System.Drawing.Size(101, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "*New Service Time:";
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(8, 126);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(6, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 25);
+            this.label3.Size = new System.Drawing.Size(126, 20);
             this.label3.TabIndex = 9;
             this.label3.Text = "*Template Service Time:";
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(8, 94);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(6, 76);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 25);
+            this.label4.Size = new System.Drawing.Size(126, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "*Template Service Date:";
             // 
             // TempServiceDate
             // 
             this.TempServiceDate.Cursor = System.Windows.Forms.Cursors.Default;
-            this.TempServiceDate.Location = new System.Drawing.Point(184, 90);
-            this.TempServiceDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TempServiceDate.Location = new System.Drawing.Point(138, 73);
             this.TempServiceDate.Name = "TempServiceDate";
-            this.TempServiceDate.Size = new System.Drawing.Size(239, 22);
+            this.TempServiceDate.Size = new System.Drawing.Size(180, 20);
             this.TempServiceDate.TabIndex = 7;
             // 
             // TempServiceTime
             // 
             this.TempServiceTime.FormattingEnabled = true;
             this.TempServiceTime.Items.AddRange(new object[] {
-            "10:00 AM",
+            "10:30 AM",
             "4:00 PM",
             "6:00 PM"});
-            this.TempServiceTime.Location = new System.Drawing.Point(184, 122);
-            this.TempServiceTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TempServiceTime.Location = new System.Drawing.Point(138, 99);
             this.TempServiceTime.Name = "TempServiceTime";
-            this.TempServiceTime.Size = new System.Drawing.Size(111, 24);
+            this.TempServiceTime.Size = new System.Drawing.Size(84, 21);
             this.TempServiceTime.Sorted = true;
             this.TempServiceTime.TabIndex = 8;
             // 
             // TitleTxt
             // 
-            this.TitleTxt.Location = new System.Drawing.Point(184, 155);
-            this.TitleTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TitleTxt.Location = new System.Drawing.Point(138, 126);
             this.TitleTxt.Name = "TitleTxt";
-            this.TitleTxt.Size = new System.Drawing.Size(152, 22);
+            this.TitleTxt.Size = new System.Drawing.Size(115, 20);
             this.TitleTxt.TabIndex = 11;
             // 
             // TitleLbl
             // 
-            this.TitleLbl.Location = new System.Drawing.Point(8, 160);
-            this.TitleLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TitleLbl.Location = new System.Drawing.Point(6, 130);
             this.TitleLbl.Name = "TitleLbl";
-            this.TitleLbl.Size = new System.Drawing.Size(168, 25);
+            this.TitleLbl.Size = new System.Drawing.Size(126, 20);
             this.TitleLbl.TabIndex = 12;
             this.TitleLbl.Text = "Service Title:";
             // 
             // ThemeLbl
             // 
-            this.ThemeLbl.Location = new System.Drawing.Point(8, 191);
-            this.ThemeLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ThemeLbl.Location = new System.Drawing.Point(6, 155);
             this.ThemeLbl.Name = "ThemeLbl";
-            this.ThemeLbl.Size = new System.Drawing.Size(168, 25);
+            this.ThemeLbl.Size = new System.Drawing.Size(126, 20);
             this.ThemeLbl.TabIndex = 14;
             this.ThemeLbl.Text = "Service Theme:";
             // 
             // ServiceThemeTxt
             // 
-            this.ServiceThemeTxt.Location = new System.Drawing.Point(184, 187);
-            this.ServiceThemeTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ServiceThemeTxt.Location = new System.Drawing.Point(138, 152);
             this.ServiceThemeTxt.Name = "ServiceThemeTxt";
-            this.ServiceThemeTxt.Size = new System.Drawing.Size(152, 22);
+            this.ServiceThemeTxt.Size = new System.Drawing.Size(115, 20);
             this.ServiceThemeTxt.TabIndex = 13;
             // 
             // SongleaderCombo
             // 
             this.SongleaderCombo.FormattingEnabled = true;
-            this.SongleaderCombo.Location = new System.Drawing.Point(184, 219);
-            this.SongleaderCombo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SongleaderCombo.Location = new System.Drawing.Point(138, 178);
             this.SongleaderCombo.Name = "SongleaderCombo";
-            this.SongleaderCombo.Size = new System.Drawing.Size(152, 24);
+            this.SongleaderCombo.Size = new System.Drawing.Size(115, 21);
             this.SongleaderCombo.TabIndex = 15;
             this.SongleaderCombo.SelectedIndexChanged += new System.EventHandler(this.SongleaderCombo_SelectedIndexChanged);
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(8, 223);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(6, 181);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(168, 25);
+            this.label5.Size = new System.Drawing.Size(126, 20);
             this.label5.TabIndex = 16;
             this.label5.Text = "Songleader:";
             // 
             // CreateBtn
             // 
-            this.CreateBtn.Location = new System.Drawing.Point(331, 306);
-            this.CreateBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CreateBtn.Location = new System.Drawing.Point(248, 249);
             this.CreateBtn.Name = "CreateBtn";
-            this.CreateBtn.Size = new System.Drawing.Size(125, 28);
+            this.CreateBtn.Size = new System.Drawing.Size(94, 23);
             this.CreateBtn.TabIndex = 17;
             this.CreateBtn.Text = "Create Service";
             this.CreateBtn.UseVisualStyleBackColor = true;
@@ -224,11 +208,9 @@
             this.groupBox1.Controls.Add(this.TitleTxt);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(16, 33);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(12, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(461, 266);
+            this.groupBox1.Size = new System.Drawing.Size(346, 216);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             // 
@@ -239,8 +221,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(493, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(370, 24);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -250,35 +231,34 @@
             this.resetFormToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // resetFormToolStripMenuItem
             // 
             this.resetFormToolStripMenuItem.Name = "resetFormToolStripMenuItem";
-            this.resetFormToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.resetFormToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.resetFormToolStripMenuItem.Text = "Reset Form";
             this.resetFormToolStripMenuItem.Click += new System.EventHandler(this.resetFormToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 380);
+            this.ClientSize = new System.Drawing.Size(370, 309);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.CreateBtn);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MinimumSize = new System.Drawing.Size(509, 393);
+            this.MinimumSize = new System.Drawing.Size(386, 327);
             this.Name = "Form1";
             this.Text = "Service Order Generator";
             this.groupBox1.ResumeLayout(false);

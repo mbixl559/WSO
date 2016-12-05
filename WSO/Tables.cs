@@ -16,6 +16,10 @@ namespace WSO
         public string First_Name { get; set; }
         public string Last_Name { get; set; }
         public string Email { get; set; }
+
+        public override string ToString() {
+            return First_Name + ' ' + Last_Name;
+        }
     }
 
     [Table("service")]
@@ -23,6 +27,7 @@ namespace WSO
     {
         [Key]
         public int Service_ID { get; set; }
+
         public DateTime Svc_DateTime { get; set; }
         public string Theme { get; set; }
         public string Title { get; set; }
@@ -30,9 +35,9 @@ namespace WSO
         public char Organist_Conf { get; set; }
         public char Songleader_Conf { get; set; }
         public char Pianist_Conf { get; set; }
-        public int Organist_ID { get; set; }
-        public int Songleader_ID { get; set; }
-        public int Pianist_ID { get; set; }
+        public int? Organist_ID { get; set; }
+        public int? Songleader_ID { get; set; }
+        public int? Pianist_ID { get; set; }
     }
 
     [Table ("ensemble")]
@@ -46,9 +51,9 @@ namespace WSO
     [Table("ensembleperson")]
     public class EnsemblePerson
     {
-        [Key]
+        [Column(Order = 0), Key]
         public int Ensemble_ID { get; set; }
-        [Key]
+        [Column(Order = 1), Key]
         public int Person_ID { get; set; }
     }
 
@@ -63,15 +68,16 @@ namespace WSO
     [Table("personunavailable")]
     public class PersonUnavailable
     {
-        [Key]
+        [Column(Order = 0), Key]
         public int Person_ID { get; set; }
-        [Key]
+        [Column(Order = 1), Key]
         public int Service_ID { get; set; }
     }
 
     [Table("serviceevent")]
     public class ServiceEvent
     {
+        [Key]
         public int Event_ID { get; set; }
         public int Service_ID { get; set; }
         public int Seq_Num { get; set; }
@@ -86,6 +92,7 @@ namespace WSO
     [Table("song")]
     public class Song
     {
+        [Key]
         public int Song_ID { get; set; }
         public char Song_Type { get; set; }
         public string Title { get; set; }
