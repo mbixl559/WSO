@@ -121,5 +121,25 @@ namespace WSO {
 
             return true;
         }
+        /// <summary>
+        /// Query the database for 
+        /// </summary>
+        /// <param name="template"></param>
+        /// <returns></returns>
+        public List<ServiceEvent> getServiceEvents(Service template)
+        {
+            List<ServiceEvent> serviceEventTemplate;
+            using (var db = new WSOApp())
+            {
+                var eventQuery = from s in db.ServiceEvents
+                                 where s.Service_ID == template.Service_ID
+                                 select s;
+                serviceEventTemplate = eventQuery.ToList();
+
+               
+            }
+
+            return serviceEventTemplate;
+        } 
     }
 }
