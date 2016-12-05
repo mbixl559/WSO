@@ -98,6 +98,13 @@ namespace WSO
             //add new service record
             model.addService(NewDate, title, theme, songleader);
 
+            List<ServiceEvent> events = model.getServiceEvents(template);
+            Service newService = model.getService(NewDate);
+            foreach(ServiceEvent se in events)
+            {
+                model.addEvent(newService.Service_ID, se.Seq_Num, se.EventType_ID);
+            }
+
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

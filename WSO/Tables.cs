@@ -81,12 +81,12 @@ namespace WSO
         public int Event_ID { get; set; }
         public int Service_ID { get; set; }
         public int Seq_Num { get; set; }
-        public int EventTye_ID { get; set; }
+        public int? EventType_ID { get; set; }
         public string Notes { get; set; }
         public char Confirmed { get; set; }
-        public int Person_ID { get; set; }
-        public int Ensemble_ID { get; set; }
-        public int Song_ID { get; set; }
+        public int? Person_ID { get; set; }
+        public int? Ensemble_ID { get; set; }
+        public int? Song_ID { get; set; }
     }
 
     [Table("song")]

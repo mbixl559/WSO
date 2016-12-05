@@ -97,5 +97,29 @@ namespace WSO {
 
             return true;
         }
+
+        public bool addEvent(int serviceid, int seqNum, int? eventType) {
+
+            using(var db = new WSOApp())
+            {
+                ServiceEvent sEvent = new ServiceEvent
+                {
+                    Service_ID = serviceid,
+                    Seq_Num = seqNum,
+                    EventType_ID = eventType,
+                    Notes = null,
+                    Confirmed = 'N',
+                    Person_ID = null,
+                    Ensemble_ID = null,
+                    Song_ID = null
+                };
+
+                db.ServiceEvents.Add(sEvent);
+
+                db.SaveChanges();
+            }
+
+            return true;
+        }
     }
 }
