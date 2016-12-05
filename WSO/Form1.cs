@@ -38,6 +38,11 @@ namespace WSO
             DateTime date = new DateTime(TempServiceDate.Value.Year, TempServiceDate.Value.Month, TempServiceDate.Value.Day, hour, min, 0);
             Service template = model.getService(date);
 
+            if(template == null)
+            {
+                MessageBox.Show("No service matching template service date/time.", "WSOApp", MessageBoxButtons.OK);
+            }
+
             int Newhour = 0, Newmin = 0;
             switch (NewServiceTme.Text)
             {
