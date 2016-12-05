@@ -13,14 +13,31 @@ namespace WSO
 {
     public partial class Form1 : Form
     {
+        Model model;
         public Form1() {
             InitializeComponent();
+            model = new Model();
+            SongleaderCombo.DataSource = model.GetSongLeaders();
         }
 
         private void CreateBtn_Click(object sender, EventArgs e)
         {
-            string tmpdate = TempServiceTime.Text;
-            Debug.Print("Template Service Time = " + tmpdate);
+            int hour = 0, min = 0;
+            switch (TempServiceTime.Text) {
+                case "10:30 AM":
+                    hour = 10;
+                    min = 30;
+                    break;
+                case "4:00 PM":
+                    hour = 16;
+                    break;
+                case "6:00 PM":
+                    hour = 18;
+                    break;
+            }
+            DateTime date = new DateTime(TempServiceDate.Value.Year, TempServiceDate.Value.Month, TempServiceDate.Value.Day, hour, min, 0);
+            Service template = model.getService(date);
+            Debug.Print(template.ToString());
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

@@ -23,15 +23,14 @@ namespace WSO {
 
 
     class Model {
-
+        /// <summary>
+        /// Returns a list of all previous longleaders.
+        /// </summary>
         public List<Person> GetSongLeaders(){
-            List<Person> Songleaders = new List<Person>();
+           List<Person> Songleaders = new List<Person>();
            using (var db = new WSOApp())
             {
-                var ServiceQuery = from s in db.Services
-                                      select s;
-                List<Service> ServiceResults = ServiceQuery.ToList();
-                foreach(Service sev in ServiceResults)
+                foreach(Service sev in db.Services)
                 {
                     var SongLeaderQuery = from p in db.Persons
                                           where p.Person_ID == sev.Songleader_ID
@@ -41,11 +40,12 @@ namespace WSO {
 
                 }
             }
-
-            return Songleaders;
+            return Songleaders.Distinct().ToList();
         }
+        /// <summary>
         /// Query the database for a service with a date matching <datetime> and return the service
         /// If there is no such service return null
+        /// </summary>
         public Service getService(DateTime datetime) {
             Service service;
             using (var db = new WSOApp()) {
