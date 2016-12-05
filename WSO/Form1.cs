@@ -38,7 +38,6 @@ namespace WSO
             }
             DateTime date = new DateTime(TempServiceDate.Value.Year, TempServiceDate.Value.Month, TempServiceDate.Value.Day, hour, min, 0);
             Service template = model.getService(date);
-            Debug.Print(template.ToString());
 
             int Newhour = 0, Newmin = 0;
             switch (NewServiceTme.Text)
@@ -55,8 +54,11 @@ namespace WSO
                     break;
             }
 
-            DateTime NewDate = new DateTime(TempServiceDate.Value.Year, TempServiceDate.Value.Month, TempServiceDate.Value.Day, hour, min, 0);
+            DateTime NewDate = new DateTime(NewServiceDate.Value.Year, NewServiceDate.Value.Month, NewServiceDate.Value.Day, Newhour, Newmin, 0);
             Service NewService = model.getService(NewDate);
+            if (NewService != null) {
+                MessageBox.Show("Service date and time you entered already exist, please choose new date and time");
+            }
 
         }
 
